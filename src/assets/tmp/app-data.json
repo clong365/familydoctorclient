@@ -1,0 +1,46 @@
+{
+  "app": {
+    "name": "家庭医生",
+    "description": "普及健康知识、参与健康行动、提供健康保障、延长健康寿命"
+  },
+  "user": {
+    "name": "Admin",
+    "avatar": "./assets/tmp/img/avatar.jpg",
+    "email": "cipchk@qq.com"
+  },
+  "menu": [
+    {
+      "text": "主导航",
+      "i18n": "menu.main",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "children": [
+        {
+          "text": "仪表盘",
+          "i18n": "menu.dashboard",
+          "icon": "anticon anticon-dashboard",
+          "children": [
+            {
+              "text": "仪表盘V1",
+              "link": "/dashboard",
+              "i18n": "menu.dashboard.v1"
+            }
+          ]
+        },
+        {
+          "text": "快捷菜单",
+          "i18n": "menu.shortcut",
+          "icon": "anticon anticon-rocket",
+          "shortcutRoot": true,
+          "children": []
+        },
+        {
+          "text": "基础服务",
+          "i18n": "menu.setting.basic-service",
+          "link": "/setting/basic-service",
+          "icon": "anticon anticon-medicine-box"
+        }
+      ]
+    }
+  ]
+}

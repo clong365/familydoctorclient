@@ -1,0 +1,30 @@
+<div class="alain-default__content-title">
+  <h1>
+    家庭医生 Angular 6版本
+    <small>无服务器端原型 !</small>
+  </h1>
+</div>
+<div nz-row [nzGutter]="16">
+  <div nz-col [nzXs]="24" [nzSm]="12">
+    <nz-card class="ant-card__body-nopadding" [nzHoverable]="true">
+      <div class="half-float half-float-md">
+        <img src="./assets/U372P5060T2D12869F39DT20170524115655.jpg">
+        <div class="half-float-bottom rounded-circle bg-grey-lighter">
+          <img class="p-sm" src="./assets/angular.svg">
+        </div>
+      </div>
+      <div class="pt-md pb-md pl-md pr-md">
+        <h3>家庭医生</h3>
+        <p class="text-grey">Angular 6</p>
+        <ol class="list-styled text-lg pt-md">
+          <li>本版本不需要服务器端支持，演示前端如何快速搭建验证原型(prototype)。</li>
+          <li>前端使用Mock服务，自己模拟演示数据，并提供GET/POST/PUT请求。</li>
+          <li>只实现了"基础服务"的CRUD功能，代码在src/routes/setting/目录下。</li>
+        </ol>
+      </div>
+      <p class="pt-md pb-md pl-md pr-md">
+        <a class="text-grey" routerLink="/setting/basic-service">基础服务...</a>
+      </p>
+    </nz-card>
+  </div>
+</div>

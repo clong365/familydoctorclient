@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <div class="modal-title">查看 {{ record.id }} 信息</div>
+</div>
+<nz-spin *ngIf="!i" class="modal-spin"></nz-spin>
+<div sv-container *ngIf="i">
+  <sv label="名称">{{ i.name }}</sv>
+  <sv label="检索码">{{ i.searchNo }}</sv>
+  <sv label="服务类型">{{ SERVICE_TYPE_TAG[i.serviceType].text }}</sv>
+  <sv label="考核类型">{{ APPRAISE_TYPE_TAG[i.appraiseType].text }}</sv>
+  <sv label="考核分值">{{ i.appraiseValue }}</sv>
+  <sv label="可否预约" [type]="i.canAppointment?'success':'danger'">{{ i.canAppointment?'是':'否' }}</sv>
+  <sv label="参考价格">{{ i.referencePrice | currency:'CNY' }}</sv>
+  <sv label="补助价格">{{ i.subsidyPrice | currency:'CNY' }}</sv>
+  <sv label="服务次数">{{ i.serviceCount }}</sv>
+  <sv label="排序">{{ i.order }}</sv>
+  <sv label="状态">{{ STATUS_BADGE[i.status].text }}</sv>
+  <sv label="简介" col="1">{{ i.desc }}</sv>
+</div>
+<div class="modal-footer">
+  <button nz-button type="button" (click)="close()">关闭</button>
+</div>

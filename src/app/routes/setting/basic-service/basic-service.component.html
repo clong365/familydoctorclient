@@ -1,0 +1,26 @@
+<page-header [action]="action">
+  <ng-template #action>
+    <button (click)="add()" nz-button nzType="primary">
+      <i class="anticon anticon-plus"></i>
+      <span>新建</span>
+    </button>
+    <ng-container *ngIf="selectedRows.length > 0">
+      <button nz-button (click)="download()"><i class="anticon anticon-file-excel"></i>导出Excel</button>
+      <button nz-button class="ml-sm" (click)="enable()"><i class="anticon anticon-play-circle-o"></i>批量启用</button>
+      <button nz-button class="ml-sm" (click)="disable()"><i class="anticon anticon-pause-circle-o"></i>批量停用</button>
+    </ng-container>
+  </ng-template>
+</page-header>
+<nz-card>
+  <sf mode="search" [schema]="searchSchema" (formSubmit)="st.reset($event)" (formReset)="st.reset($event)"></sf>
+  <!-- <button nz-button (click)="add()" [nzType]="'primary'" class="mt-md mb-md">
+    <i class="anticon anticon-plus"></i>
+    <span>新建</span>
+  </button>
+  <ng-container *ngIf="selectedRows.length > 0">
+    <button nz-button (click)="download()"><i class="anticon anticon-file-excel"></i>导出Excel</button>
+    <button nz-button class="ml-sm" (click)="enable()"><i class="anticon anticon-play-circle-o"></i>批量启用</button>
+    <button nz-button class="ml-sm" (click)="disable()"><i class="anticon anticon-pause-circle-o"></i>批量停用</button>
+  </ng-container> -->
+  <st #st [data]="url" [columns]="columns" (checkboxChange)="checkboxChange($event)"></st>
+</nz-card>
